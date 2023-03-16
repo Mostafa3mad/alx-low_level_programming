@@ -1,15 +1,16 @@
 #include <stdio.h>
+
 /**
- * maim -EWntry point 
+ * main - Entry point
  *
- * Return always 0 (success)
+ * Return: always 0 (Success)
  */
-int main (void)
+int main(void)
 {
-	char d;
 	int a;
 	long int b;
 	long long int c;
+	char d;
 	float f;
 
 	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(d));
