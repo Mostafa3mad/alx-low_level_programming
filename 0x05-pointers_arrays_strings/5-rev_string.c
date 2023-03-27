@@ -1,23 +1,26 @@
-#include "holberton.h"
-
 /**
- * rev_string - a function that reverse a string
- * followed by a new line.
- * @s: an input string
+ * rev_string - reverses a string
+ *
+ * @s: string parameter input
+ *
  * Return: Nothing
- */
+*/
+
 void rev_string(char *s)
 {
-	int len = 0, i = 0;
-	char aux;
+	int l, i;
+	char ch;
 
-	while (s[len] != '\0')
-		len++;
+	/*find string length without null char*/
+	for (l = 0; s[l] != '\0'; ++l)
+		;
 
-	while (i < len--)
+	/*swap the string by looping to half the string*/
+	for (i = 0; i < l / 2; ++i)
 	{
-		aux = s[i];
-		s[i++] = s[len];
-		s[len] = aux;
+		ch = s[i];
+		s[i] = s[l - 1 - i]; /*-1 because the array starts from 0*/
+		s[l - 1 - i] = ch;
 	}
+
 }
